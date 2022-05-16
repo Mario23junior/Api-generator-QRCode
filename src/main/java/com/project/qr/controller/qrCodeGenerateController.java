@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/generate/qrcode/")
+@RequestMapping("/api/qrcode/")
 public class qrCodeGenerateController {
 
 	private GenerationQRcode service;
@@ -22,7 +22,7 @@ public class qrCodeGenerateController {
 		this.service = service;
 	}
 
-	private final String PATH_CODE_QRIMAGE = "./src/main/resource/QRCode.png";
+	private final String PATH_CODE_QRIMAGE = "./src/main/resources/QRCode.png";
 
 	@GetMapping(value = "generat/{width}/{height}/{codeText}")
 	public void capturingContentMetricsQrCode(@PathVariable("codeText") String codeText,
@@ -31,7 +31,7 @@ public class qrCodeGenerateController {
 		service.geneateQRCodeImageMetrics(codeText, width, height, PATH_CODE_QRIMAGE);
 	}
 
-	@GetMapping(value = "/generate/{width}/{height}/{codeText}")
+	@GetMapping(value = "generate/{width}/{height}/{codeText}")
 	public ResponseEntity<byte[]> generateQRCode(@PathVariable("codeText") String codeText,
 			@PathVariable("width") Integer width, @PathVariable("height") Integer height) throws WriterException, IOException {
 		return ResponseEntity.status(HttpStatus.OK)
