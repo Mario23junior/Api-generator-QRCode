@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -24,8 +25,8 @@ public class qrCodeGenerateController {
 
 	private final String PATH_CODE_QRIMAGE = "./src/main/resources/QRCode.png";
 
-	@GetMapping(value = "generat/{width}/{height}/{codeText}")
-	public void capturingContentMetricsQrCode(@PathVariable("codeText") String codeText,
+	@GetMapping(value = "generat/{width}/{height}/")
+	public void capturingContentMetricsQrCode(@RequestParam("conten") String codeText,
 			@PathVariable("width") Integer width, @PathVariable("height") Integer height)
 			throws IOException, WriterException {
 		service.geneateQRCodeImageMetrics(codeText, width, height, PATH_CODE_QRIMAGE);
