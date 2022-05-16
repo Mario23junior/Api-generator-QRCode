@@ -17,9 +17,9 @@ import org.springframework.stereotype.Service;
 public class GenerationQRcode {
    
 	String format = "PNG";
-	public void geneateQRCodeImage(String text, Integer width,Integer height, String filePath) throws IOException, WriterException {
+	public void geneateQRCodeImageMetrics(String text, Integer width, Integer height, String filePath) throws IOException, WriterException {
 		QRCodeWriter qrgenerate = new QRCodeWriter();
-		BitMatrix bitMatrix = qrgenerate.encode(filePath, BarcodeFormat.QR_CODE, width, height);
+		BitMatrix bitMatrix = qrgenerate.encode(text, BarcodeFormat.QR_CODE, width, height);
 		
 		Path path = FileSystems.getDefault().getPath(filePath);
 		MatrixToImageWriter.writeToPath(bitMatrix, format, path);
