@@ -37,13 +37,7 @@ mundo e sua ciência.
 ## Primeiro execute o maven 
 
 ## 🚀 Começando
-  
-## Consulte a documentação 
-
-```
-https://phrase-generator-science-api.herokuapp.com/swagger-ui/index.html#
-```
-  
+   
 Algums parametros de ação são necessarios para a execução
 ### 📋 Pré-requisitos
 
@@ -66,7 +60,7 @@ localhost:8080/api/qrcode/generat/600/600/?conten=https://github.com/Mario23juni
 ## Acesse o swagger para uma melhor leitura  
  
 ```
-http://localhost:8080/swagger-ui/index.html#/phrase-controller/findDataAll
+http://localhost:8080/swagger-ui/index.html
 ``` 
   
 ## 🛠️ Construído com
