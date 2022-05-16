@@ -37,12 +37,6 @@ mundo e sua ciência.
 ## Primeiro execute o maven 
 
 ## 🚀 Começando
-
-## Uso em produção
-
-```
-  https://phrase-generator-science-api.herokuapp.com/api/project/rand/
-```
   
 ## Consulte a documentação 
 
