@@ -25,8 +25,7 @@
 <h1 align="center"></h1>
 
 <h3 align="center">
-   api de geração de QRCode com,base em um conteudo passado na URL
-mundo e sua ciência.
+   api de geração de QRCode com,base em um conteudo passado na URL de acesso
  </a>
  <p align="center">
  
