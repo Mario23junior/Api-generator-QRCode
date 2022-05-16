@@ -54,7 +54,7 @@ Uma série de exemplos passo-a-passo que informam o que você deve executar para
 Diga como essa etapa será:
 
 ```
-java -jar target/phraseGenerator-1.0-SNAPSHOT.jar
+java -jar target/projectQr-1.0-SNAPSHOT.jar
 
 ```
  
